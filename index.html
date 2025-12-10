@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratik D - Data Analyst Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <nav>
+            <a href="#home" class="sidebar-item active"><i class="fas fa-home"></i></a>
+            <a href="#about" class="sidebar-item"><i class="fas fa-user-alt"></i></a>
+            <a href="#projects" class="sidebar-item"><i class="fas fa-clipboard-list"></i></a>
+            <a href="#skills" class="sidebar-item"><i class="fas fa-star"></i></a>
+            <a href="#contact" class="sidebar-item"><i class="fas fa-envelope"></i></a>
+        </nav>
+    </aside>
+
+    <main class="content-wrapper">
+
+        <section id="home" class="hero-section">
+            <div class="hero-text">
+                <p class="script-text">Hello, I am</p>
+                <h1>Pratik</h1>
+                <h2 class="accent-text">Data Analyst</h2>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/pratik-dhote-85b25a266/" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/dashboard" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="profile-circle">
+                    <img src="https://i.vimeocdn.com/portrait/122427460_288x288?sig=cbe379bfe311300bb2ab438010c15915d578e261919603e6d162b438301c87b7&v=1&region=us" alt="Data Analyst Profile" class="profile-img">
+                    <button class="play-button" onclick="openIntroVideo('https://vimeo.com/1145170275?share=copy&fl=sv&fe=ci')">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="project-counters">
+                <div class="counter-card" data-tool="excel">
+                    <i class="fas fa-file-excel counter-icon"></i>
+                    <p class="count-number">1</p>
+                    <p class="count-label">Excel Project</p>
+                </div>
+                <div class="counter-card" data-tool="powerbi">
+                    <i class="fas fa-chart-bar counter-icon"></i>
+                    <p class="count-number">2</p>
+                    <p class="count-label">PowerBI Projects</p>
+                </div>
+                <div class="counter-card" data-tool="sql">
+                    <i class="fas fa-database counter-icon"></i>
+                    <p class="fas fa-database counter-icon">1</p>
+                    <p class="count-label">SQL Project</p>
+                </div>
+                <div class="counter-card" data-tool="python">
+                    <i class="fab fa-python counter-icon"></i>
+                    <p class="count-number">1</p>
+                    <p class="count-label">Python Project</p>
+                </div>
+            </div>
+
+            <div id="about" class="about-me-container">
+                <h2 class="section-title">About <span class="accent-text">Me</span></h2>
+                <p class="about-text">
+                    Data detective wielding Python and SQL to clean and analyze. I turn messy Excel sheets into 		    clear, actionable insights!
+                </p>
+                </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">Technical <span class="accent-text">Skills</span></h2>
+            <div class="skills-grid">
+                <span class="skill-tag">EXCEL</span>
+                <span class="skill-tag">POWERBI</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">PYTHON</span>
+                <span class="skill-tag soft-skill">STAKEHOLDER MANAGEMENT</span>
+                <span class="skill-tag soft-skill">EFFECTIVE PRESENTATION</span>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">My <span class="accent-text">Projects</span></h2>
+            <div class="project-cards-grid">
+                
+                <div class="project-card" onclick="openProjectModal('excel-1')">
+                    <img src="[EXCEL_PROJECT_THUMBNAIL_URL]" alt="Excel Project Thumbnail">
+                    <h3>[Excel Project Title]</h3>
+                    <p>[Brief Excel Project Summary]</p>
+                </div>
+
+                <div class="project-card" onclick="openProjectModal('powerbi-1')">
+                    <img src="[POWERBI_PROJECT_1_THUMBNAIL_URL]" alt="PowerBI Project Thumbnail">
+                    <h3>[PowerBI Project Title 1]</h3>
+                    <p>[Brief PowerBI Project 1 Summary]</p>
+                </div>
+
+                <div class="project-card" onclick="openProjectModal('powerbi-2')">
+                    <img src="[POWERBI_PROJECT_2_THUMBNAIL_URL]" alt="PowerBI Project Thumbnail">
+                    <h3>[PowerBI Project Title 2]</h3>
+                    <p>[Brief PowerBI Project 2 Summary]</p>
+                </div>
+                
+                <div class="project-card" onclick="openProjectModal('sql-1')">
+                    <img src="[SQL_PROJECT_THUMBNAIL_URL]" alt="SQL Project Thumbnail">
+                    <h3>[SQL Project Title]</h3>
+                    <p>[Brief SQL Project Summary]</p>
+                </div>
+
+                <div class="project-card" onclick="openProjectModal('python-1')">
+                    <img src="[PYTHON_PROJECT_THUMBNAIL_URL]" alt="Python Project Thumbnail">
+                    <h3>[Python Project Title]</h3>
+                    <p>[Brief Python Project Summary]</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Get in <span class="accent-text">Touch</span></h2>
+            <p>Ready to collaborate? [Your contact form or information]</p>
+        </section>
+
+    </main>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeProjectModal()">&times;</span>
+            <div class="modal-header">
+                <h2>[Project Title Placeholder]</h2>
+                <div class="project-tags">
+                    <span class="tag">[Tool Tag Placeholder]</span>
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-links">
+                    <a href="[PROJECT_ENGAGEMENT_LINK]" target="_blank" class="modal-link engagement-link"><i class="fab fa-linkedin"></i> View Project Engagement</a>
+                    <a href="[PROJECT_GITHUB_LINK]" target="_blank" class="modal-link github-link"><i class="fab fa-github"></i> View Project on GitHub</a>
+                </div>
+
+                <div class="project-visual">
+                    <iframe width="100%" height="400" src="[PROJECT_VIDEO_EMBED_URL]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <h3 class="modal-subtitle">Project Details</h3>
+                <p class="modal-details-text">
+                    [YOUR IN-DEPTH PROJECT WRITE-UP GOES HERE. Focus on Problem, Solution, and Impact.]
+                </p>
+                
+                <button class="modal-nav-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>
+                <button class="modal-nav-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openProjectModal(projectId) {
+            document.getElementById('projectModal').style.display = 'flex';
+            // In a real implementation, this function would load project data based on projectId
+            console.log('Opening project: ' + projectId);
+        }
+        
+        function closeProjectModal() {
+            document.getElementById('projectModal').style.display = 'none';
+        }
+        
+        // Simple JS for sidebar active state
+        document.querySelectorAll('.sidebar-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
